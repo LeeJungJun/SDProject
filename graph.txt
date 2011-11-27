@@ -8,11 +8,3 @@ F
 G
 H
 I
-7
-A A
-B C
-B A
-D D
-F F
-G F
-I H
