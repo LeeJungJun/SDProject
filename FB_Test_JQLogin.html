@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!doctype html> 
+<html> 
+  <!-- 
+    Copyright Facebook Inc. 
+
+    Licensed under the Apache License, Version 2.0 (the "License"); 
+    you may not use this file except in compliance with the License. 
+    You may obtain a copy of the License at 
+
+        http://www.apache.org/licenses/LICENSE-2.0 
+
+    Unless required by applicable law or agreed to in writing, software 
+    distributed under the License is distributed on an "AS IS" BASIS, 
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+    See the License for the specific language governing permissions and 
+    limitations under the License. 
+  --> 
+  <head> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+    <title>Connect JavaScript - jQuery Login Example</title> 
+  </head> 
+  <body> 
+    <h1>Connect JavaScript - jQuery Login Example</h1> 
+    <div> 
+      <button id="login">Login</button> 
+      <button id="logout">Logout</button> 
+      <button id="disconnect">Disconnect</button> 
+    </div> 
+    <div id="user-info" style="display: none;"></div> 
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ 
+    <div id="fb-root"></div> 
+    <script src="http://connect.facebook.net/en_KOR]/all.js"></script> 
+    <script> 
+      // initialize the library with the API key 
+      FB.init({ apiKey: '969ed47c0b02603a81c3b3c87a900ff5' }); 
+
+      // fetch the status on load 
+      FB.getLoginStatus(handleSessionResponse); 
+
+      $('#login').bind('click', function() { 
+        FB.login(handleSessionResponse); 
+      }); 
+
+      $('#logout').bind('click', function() { 
+        FB.logout(handleSessionResponse); 
+      }); 
+
+      $('#disconnect').bind('click', function() { 
+        FB.api({ method: 'Auth.revokeAuthorization' }, function(response) { 
+          clearDisplay(); 
+        }); 
+      }); 
+
+      // no user, clear display 
+      function clearDisplay() { 
+        $('#user-info').hide('fast'); 
+      } 
+
+      // handle a session response from any of the auth related calls 
+      function handleSessionResponse(response) { 
+        // if we dont have a session, just hide the user info 
+        if (!response.session) { 
+          clearDisplay(); 
+          return; 
+        } 
+
+        // if we have a session, query for the user's profile picture and name 
+        FB.api( 
+          { 
+            method: 'fql.query', 
+            query: 'SELECT name, pic FROM profile WHERE id=' + FB.getSession().uid
+           }, 
+          function(response) { 
+            var user = response[0]; 
+            $('#user-info').html('<img src="' + user.pic + '">' + user.name).show('fast');
+           } 
+        ); 
+      } 
+    </script> 
+<div  style="border-top-style: double; border-right-style: double; border-bottom-style: double; border-left-style: double; border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-top-color: rgb(243, 197, 52); border-right-color: rgb(243, 197, 52); border-bottom-color: rgb(243, 197, 52); border-left-color: rgb(243, 197, 52); background-color: rgb(254, 254, 184); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; ">
+ <? 
+$file = "./login.html"; 
+show_source($file);     
+
+?>     
+</div>   
+  </body> 
+</html> 
+
+
+</body>
+</html>
