@@ -17,7 +17,7 @@ int flag = dao.checkIdPw(id,pw);
 if(flag ==0){ //틀린경우
 	response.sendRedirect("loginfail.jsp");
 } else if(flag ==1){ //	맞은경우
-	response.sendRedirect("loginok.jsp");
+	response.sendRedirect("MainFrame.html");
 }
 
 %>

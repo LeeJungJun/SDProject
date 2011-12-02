@@ -9,29 +9,30 @@
 <body>
 
 <form action = "login.jsp" method = "post">
-<table border = "1" width = "300">
+
 <tr>
-<td width = "100" align = "center">ID</td>
+<td width = "100" align = "right">ID</td>
 <td><input type = "text" name = "id" size = "12" maxlength = "12"></td>
 </tr>
 
+<br></br>
 <tr>
-<td align = "center">Password</td>
+<td width = "100" align = "right">Password</td>
 <td><input type = "password" name = "pw" size = "13" maxlength = "12"></td>
 </tr>
 
-<tr>
+<br></br>
 <td colspan = "2"> <%-- 합치기--%>
-<input type = "submit" value = "login">
+<input type="image" src="./Pic_01/button_login.png" border="0"></input>
 </td>
-</tr>
-</table>
+
+
 </form>
 
 <form action = "logintojoin.jsp" method = "post">
-<tr>
-<input type = "submit" value = "회원가입">
-</tr>
+
+<input type="image" src="./Pic_01/button_join.png" border="0"></input>
+
 </form>
 </body>
 </html>

@@ -14,7 +14,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>GoogleMapTest</title>
+<title>SD Project - Lionel Mash</title>
 
 <%!		//전역변수
 double latitude = 37.60297;
@@ -38,7 +38,7 @@ double tempLongtitude;
                         var map = new GMap2(document.getElementById("map_canvas"));
                         map.addControl(new GSmallMapControl());
                         map.addControl(new GMapTypeControl());
-                        map.setCenter(new GLatLng(37.60297,126.954972), 17);
+                        map.setCenter(new GLatLng(37.60297,126.954972), 15);
                         map.setMapType(G_NORMAL_MAP);
                         //map.openInfoWindow(map.getCenter(), document.createTextNode("Hello SangmyungUniversity"));
                         //latitude = 37.60297;
@@ -87,7 +87,7 @@ double tempLongtitude;
    </head>
    
 	<body onload="initialize()" onunload="GUnload()">
-		<div id="map_canvas" style="width: 500px; height: 300px"></div>
+		<div id="map_canvas" style="width: 700px; height: 350px"></div>
 		
 		<!--
 		 ================
@@ -96,9 +96,19 @@ double tempLongtitude;
 		<form name="pointFrm" method="post" target="frameWeather" action="./googleWeather.jsp">
 				<input type="hidden" name="latitude" value="37.60297">
 				<input type="hidden" name="longtitude" value="126.954972">
-		</form>
+		</form>       
 		
-                  
-                   
+		
+		<iframe src="http://www.facebook.com/plugins/like.php?href=SD_Project_Lionel_Mash"
+        scrolling="no" frameborder="0"
+        style="border:none; width:450px; height:80px"></iframe>
 	</body>
+		 
 </html>
+
+
+   
+    
+
+ 
+ 

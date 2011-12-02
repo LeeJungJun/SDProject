@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>login fail</title>
+<title>SD Project - Lionel Mash</title>
 </head>
 <body>
-아이디와 비밀번호가 틀립니다. 다시 로그인해 주세요 <br>
-<a href = "loginform.jsp">로그인</a>
+<h2>아이디와 비밀번호가 틀립니다. 다시 로그인해 주세요</h2> <br>
+<a href = "loginform.jsp">
+<img src = "./Pic_01/button_login.png"/></a>
 </body>
 </html>

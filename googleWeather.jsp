@@ -14,7 +14,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>GoogleWeatherTest</title>
+<title>SD Project - Lionel Mash</title>
 
 </head>
                    
@@ -139,6 +139,9 @@ try{
 	e.printStackTrace();
 }
 %>
+
+
 	       </body>
 
 </html>
+
